@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- **The GeForce GTX TITAN X (Maxwell, sm_52) in the installer's name fallback.** For drivers that do not report
+  `compute_cap`, it matched the Kepler `GTX TITAN` and got the kepler class. It now gets sm_52 and the maxwell class.
+
 ## 0.3.0 (2026-10-28)
 
 ### New
