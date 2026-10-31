@@ -99,6 +99,11 @@ To select without questions, add `--auto`: the installer takes the recommended s
 | tc | sm_80 or newer, 9.5 GB or more | 131,072 |
 | rocm-gfx1103 | AMD Radeon 780M | 24,576 |
 
+The installer reads the compute capability (sm_XX) from `nvidia-smi`. Older drivers, such as Kepler's 470 series, do
+not report it; the installer then finds it from the card's name. It knows the common Kepler, Maxwell, Pascal, Turing,
+Ampere and Ada names, the Tesla K10, K20, K40 and K80 among them, and gives an unknown name sm_61. If the profile is
+wrong for your card, choose the model with `--model`.
+
 Nemotron always asks for 24,576. The engine fits the context to the free memory and reports what it got. For
 example, Nemotron split over two K1200 cards gets 8,448.
 
