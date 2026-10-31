@@ -4,6 +4,8 @@
 
 - **The GeForce GTX TITAN X (Maxwell, sm_52) in the installer's name fallback.** For drivers that do not report
   `compute_cap`, it matched the Kepler `GTX TITAN` and got the kepler class. It now gets sm_52 and the maxwell class.
+- **The Tesla K10 and K20 in the installer's name fallback.** They fell to the sm_61 default and got the maxwell
+  class, which offers Nemotron. The K10 now gets sm_30 and the K20 (K20c, K20m, K20X) sm_35: the kepler class.
 
 ## 0.3.0 (2026-10-28)
 

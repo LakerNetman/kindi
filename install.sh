@@ -188,9 +188,9 @@ if command -v nvidia-smi >/dev/null && nvidia-smi >/dev/null 2>&1; then
     if [ "$c" = "?" ] || [ -z "$c" ]; then   # older drivers (Kepler's 470) do not report it: from the name
       case "$n" in
         *"GTX TITAN X"*) c=5.2 ;;                                                      # GM200, before *"GTX TITAN"*
-        *K6000*|*K5200*|*K40*|*"GTX TITAN"*|*"GTX 780"*) c=3.5 ;;                      # GK110
+        *K6000*|*K5200*|*K40*|*"Tesla K20"*|*"GTX TITAN"*|*"GTX 780"*) c=3.5 ;;        # GK110
         *K80*) c=3.7 ;;                                                                # GK210
-        *K420*|*K600*|*K2000*|*K4000*|*K4200*|*K5000*|*"GTX 6"*|*"GTX 7"[0-4]*|*"GT 7"*) c=3.0 ;;
+        *K420*|*K600*|*K2000*|*K4000*|*K4200*|*K5000*|*"Tesla K10"*|*"GTX 6"*|*"GTX 7"[0-4]*|*"GT 7"*) c=3.0 ;;
         *K620*|*K1200*|*K2200*|*"GTX 75"*|*"GTX 9"*|*M[0-9]*) c=5.0 ;;
         *"GTX 10"*|*"Quadro P"*|*"TITAN X"*|*Tesla\ P*) c=6.1 ;;
         *"RTX 20"*|*"GTX 16"*|*"Quadro RTX"*|*T4*) c=7.5 ;;
